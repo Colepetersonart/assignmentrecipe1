@@ -47,17 +47,26 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 /* Start Code*/
+
+/* color palette
+#0d0d0d--black
+#f2f2f2--grey
+#7abfbd-- turqoise
+Rgba(122, 191, 191, .5 --light blue
+#eb5428-- orange
+*/
 html {
     background-color: rgba(122, 191, 191, .5);
+    font-family: 'Bebas Neue','Montserrat', sans-serif; 
+   
 }
 body {
-    text-align: start;
     background-color: #F2F2F2;
-    display: grid;
+    width: 414px;
     margin: 0 auto;
-    font-family: 'Bebas Neue','Montserrat', sans-serif; 
-    max-inline-size: 414px;
+    display: grid;
     grid-template-areas: 
     "header"
     "details"
@@ -67,11 +76,14 @@ body {
     "footer";
 }
 header {
+    margin-block-start: 48%;
+    justify-content: center;
     text-align: center;
     
 }
 header, img {
-    inline-size: 50%;
+    inline-size: 100%;
+    justify-content: center;
 }
 h1 {
     text-align: center;
@@ -81,7 +93,7 @@ h1 {
 }
 figure img{
     block-size: auto;
-    max-inline-size: 40%;
+    max-inline-size: 100%;
 }
 h2 {
     font-size: 30px;
@@ -106,60 +118,207 @@ a:hover{
 }
 
 menu li {
-    font-family: 'Bebas Neue', 'Lobster Two', sans-serif; 
-    display: flex;
+    font-family: 'Bebas Neue'; 
+    display: inline-flex;
     font-size: 20px;
     color: #eb5428;
-    
+    justify-content: center;
+    text-decoration: none;
+
 }
+menu li a {
+    text-decoration: none;
+    color: #eb5428;  
+}
+
 p {
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
 }
-nav {
-    font-size: 16px;
-}
-#detail h2 {
-    background-color: #0d0d0d; 
+
+#details h2 {
     text-align: center;
-    color: #7abfbf;
+    color: #0d0d0d;
     
 }
-#detail dl {
-    padding: 10px;
-    display: flex;
-    background-color: #0d0d0d; 
-    color: #7abfbf;
-    column-count: 5;
-    grid-row: 4;
-    column-gap: 40px;
+
+#details dd {
+    font-family:'Montserrat', sans-serif; 
+    color:  #0d0d0d;
+    text-align: start;
 }
-#direct h2 {
-    padding-inline-start: 20px;
+
+#Ingredients h2{
+    text-align: center;
+    
 }
-#direct ul {
+#Ingredients ul{
     list-style-type: disc;
-    padding-inline-start: 40px;
+    padding-inline-start: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
-#direct h3{
-   text-align: center;
+
+#directions h2 {
+    text-align: center;
 }
-#direct ol {
+#directions ol{
     list-style-type: decimal;
-    padding-inline-start: 200px;
-    padding-inline-end: 100px;
+    padding: 25px;
+    font-family:'Montserrat', sans-serif ;
 }
-#dishes {
-    block-size: auto;
-    display:grid;
+#directions li{
+    padding-block-end: 10px;
+}
+#dishes  {
+    display: grid;
     background-color:#7abfbf;
     color: #0d0d0d;
-    grid-template-columns: auto;
-}
-#dishes h2{
+    grid-template-columns: 1fr 1fr;
     text-align: center;
+} 
+.foodpic {
+    grid-column-start: 1;
+
+}
+.rating {
+    grid-column-start: 2;
+    text-align: center;
+}
+#nav {
+    justify-content: center;
+}
+#nav h2 {
+    display: none;
+}
+#nav nav ul {
+    display: flex;
+    text-align-last: auto;
+    inline-size: auto;
+    margin: 0 auto;
+    position: absolute;
+    inset-block-start: 0;
+    
+    
+}
+#nav nav a {
+    display: flex;
+    font-size: 16px;
+    text-decoration: none;
+    
 }
 #connect {
     color: #eb5428;
 }
+#cooking h1{
+    text-align: center;
+}
+#cooking ol li {
+        list-style-type: decimal;
+        padding-inline-start: 200px;
+        padding-inline-end: 100px;
+}
+#search{
+    
+    border: 1px solid #eb5428;
+    position: absolute;
+    inset-block-start: 8%;
+    display: inline-flex;
+    
+    
+}
+#connect {
+    display: flex;
+    padding-block-start: 30px;
+    inline-size: 80%;
+}
+#connect h3 {
+    display: none;
+}
+#connect h4 {
+    display: none;
+}
+#connect h5 {
+    display: none;
+}
+#connect, a {
+    text-decoration: none;
+   justify-content: center;
+   vertical-align: bottom;
+   inline-size: auto;
+   padding: 20px;
+   color: #eb5428;
+   
+}
+#connect, a:hover{
+    color: #F2F2F2;
+    
+}
 
+footer {
+    font-family:'Bebas Neue';
+    text-align: center;
+    margin-inline-start: 0%;
+}      
+footer img {
+    margin-block-start: 0%;
+    inline-size: 50%;
+    margin-block-end: 50px;
+    
+}
+@media screen and (min-width: 768px) {
+    body {
+        width: 760px
+    }
+}
+@media screen and (min-width: 1280px) {
+    body{
+        width: 1200px;
+    }
+    header{
+        margin-block-start: 15%;
+        
+    }
+    #details h2 {
+        background-color: #0d0d0d; 
+        text-align: center;
+        color: #7abfbf;
+    }
+    #details dl {
+        text-align: center;
+        display: flex;
+        padding-inline-start: 10%;
+        background-color: #0d0d0d; 
+        color: #7abfbf;     
+    } 
+    #details dt {
+    
+        color: #7abfbf;
+        padding: 10px;
+    } 
+    #details dd {
+        color: #7abfbf;
+        padding: 10px;
+      
+    }
+    
+    #dishes {
+        display: flex;
+    } 
+    #nav nav ul {
+        display: flex;
+        text-align-last: right;
+        inline-size: 70%;
+        margin: auto;
+        position: absolute;
+        inset-block-start: 0;
+        
+         
+        
+    }
+    #nav nav a {
+        display: inline-flex;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 10px;
+}
+}
